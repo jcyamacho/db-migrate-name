@@ -2,6 +2,8 @@
 
 database migration name generator
 
+![Build Status](https://github.com/jcyamacho/db-migrate-name/workflows/Go/badge.svg)
+
 ## install
 
 ### using go
