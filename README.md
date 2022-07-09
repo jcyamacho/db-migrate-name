@@ -6,6 +6,15 @@ database migration name generator
 
 ## install
 
+### install script
+ binary will be (go env GOPATH)/bin/db-migrate-name
+```
+curl -sSfL https://raw.githubusercontent.com/jcyamacho/db-migrate-name/main/install.sh | sh -s -- -b $(go env GOPATH)/bin
+```
+or install it into ./bin/
+```
+curl -sSfL https://raw.githubusercontent.com/jcyamacho/db-migrate-name/main/install.sh | sh
+```
 ### using go
 
 ```
