@@ -13,8 +13,9 @@ build: tools
 	goreleaser release --snapshot --rm-dist
 
 ARG ?= next
+VERSION := $(shell ${TOOLS}/bin/svu $(ARG))
 release: tools
-	git tag "$(${TOOLS}/bin/svu $(ARG))"
+	git tag "$(VERSION)"
 	git push --tags
 
 release-major: ARG=major
