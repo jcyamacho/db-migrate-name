@@ -1,0 +1,20 @@
+project_name: "db-migrate-name"
+before:
+  hooks:
+    - go mod tidy
+builds:
+  - main: ./cmd/db-migrate-name
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+checksum:
+  name_template: 'checksums.txt'
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
