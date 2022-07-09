@@ -16,7 +16,7 @@ ARG ?= next
 VERSION := $(shell ${TOOLS}/bin/svu $(ARG))
 release: tools
 	git tag "$(VERSION)"
-	git push --tags
+	git push origin "$(VERSION)"
 
 release-major: ARG=major
 release-major: release
